@@ -1,20 +1,18 @@
-//
-//  ViewController.swift
-//  healMyEyes
-//
-//  Created by Yuki Shinohara on 2020/02/25.
-//  Copyright © 2020 Yuki Shinohara. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+
+    // CollectionViewControllerから渡される色のデータ
+    var receiveImage: UIImage = UIImage(named: "0")!
+    var receiveImageName: String = "白石麻衣"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 背景の色を渡された色にする
+        imageView.image = receiveImage
+        // NavigationItemと呼ばれる一番上のバーに色の名前を入れる
+        self.navigationItem.title = receiveImageName
     }
-
-
 }
-

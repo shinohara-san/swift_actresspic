@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HKR-NJ-pvO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Collection View Controller-->
+        <scene sceneID="6lj-tu-Ezb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="Bqp-78-3ZH" customClass="CollectionViewController" customModule="healMyEyes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dzQ-uu-Jan">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="3" minimumInteritemSpacing="3" id="O2X-ln-rgi">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="uEx-NT-sKn" customClass="CustomCell" customModule="healMyEyes" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="0.0" width="207" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="veG-at-QqC" customClass="CustomCell" customModule="healMyEyes" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-pX-EPs">
+                                            <rect key="frame" x="8" y="8" width="191" height="163"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVu-AN-tDQ">
+                                            <rect key="frame" x="20" y="179" width="167" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="5sv-nA-dw3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="MVu-AN-tDQ" secondAttribute="bottom" constant="20" symbolic="YES" id="3w4-Yg-phM"/>
+                                        <constraint firstItem="MVu-AN-tDQ" firstAttribute="leading" secondItem="veG-at-QqC" secondAttribute="leading" constant="20" symbolic="YES" id="44K-7u-AFu"/>
+                                        <constraint firstItem="cXH-pX-EPs" firstAttribute="top" secondItem="veG-at-QqC" secondAttribute="topMargin" id="AQ8-nX-huP"/>
+                                        <constraint firstAttribute="trailing" secondItem="MVu-AN-tDQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Wht-5E-L5H"/>
+                                        <constraint firstItem="MVu-AN-tDQ" firstAttribute="top" secondItem="cXH-pX-EPs" secondAttribute="bottom" constant="8" symbolic="YES" id="bRk-vm-20N"/>
+                                        <constraint firstItem="cXH-pX-EPs" firstAttribute="leading" secondItem="veG-at-QqC" secondAttribute="leadingMargin" id="cru-7j-gDh"/>
+                                        <constraint firstItem="MVu-AN-tDQ" firstAttribute="top" secondItem="veG-at-QqC" secondAttribute="top" constant="179" id="ljA-Lo-oAR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cXH-pX-EPs" secondAttribute="trailing" id="oI3-nz-y2Y"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="207" height="172"/>
+                                <connections>
+                                    <outlet property="imageView" destination="cXH-pX-EPs" id="8Gj-vi-iN8"/>
+                                    <outlet property="label" destination="MVu-AN-tDQ" id="3ud-60-qvl"/>
+                                    <segue destination="Hh8-KD-T3x" kind="show" identifier="Segue" id="zYg-Lr-eIn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Bqp-78-3ZH" id="PtX-bv-bHt"/>
+                            <outlet property="delegate" destination="Bqp-78-3ZH" id="nlh-pB-Vxc"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Zb0-tv-GQv"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2b1-7M-7JD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="785.50724637681162" y="63.616071428571423"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A5x-Jg-fBS">
+            <objects>
+                <viewController id="Hh8-KD-T3x" customClass="ViewController" customModule="healMyEyes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6KA-Xt-6My">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v11-5I-Ws5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3nR-JG-kQQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7ts-XP-e3C"/>
+                    <connections>
+                        <outlet property="imageView" destination="v11-5I-Ws5" id="IuC-oo-vM6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vS3-rA-wa2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.4637681159422" y="62.946428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4b2-lR-h6Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HKR-NJ-pvO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cNs-ci-RjH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bqp-78-3ZH" kind="relationship" relationship="rootViewController" id="LHQ-E6-XRh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIt-LE-TKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124.6376811594203" y="63.616071428571423"/>
         </scene>
     </scenes>
 </document>

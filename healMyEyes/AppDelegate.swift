@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  healMyEyes
-//
-//  Created by Yuki Shinohara on 2020/02/25.
-//  Copyright © 2020 Yuki Shinohara. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
